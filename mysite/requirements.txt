@@ -2,3 +2,4 @@ django
 djangorestframework
 environs
 openai
+python-dotenv

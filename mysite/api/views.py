@@ -4,6 +4,9 @@ import openai
 from rest_framework import generics
 from .models import Task
 from .serializers import TaskSerializer
+from dotenv import load_dotenv
+import os
+
 
 # 📌 Lấy danh sách tất cả task + Thêm mới
 class TaskListCreateView(generics.ListCreateAPIView):
@@ -15,10 +18,10 @@ class TaskDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     
-# 🔥 Cách mới để gọi OpenAI API
-# client = openai.OpenAI(api_key="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")
 
-client = openai.OpenAI(api_key="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")
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+client = openai.OpenAI(api_key="")
 
 
 def ask_ai(request):
