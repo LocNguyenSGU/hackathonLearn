@@ -21,7 +21,7 @@ class TaskDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TaskSerializer
     
 
-client = openai.OpenAI(api_key="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")
+client = openai.OpenAI(api_key="")
 
 
 def ask_ai(request):
