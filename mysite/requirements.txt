@@ -3,3 +3,7 @@ djangorestframework
 environs
 openai
 python-dotenv
+vosk 
+pyaudio
+numpy 
+soundfile
